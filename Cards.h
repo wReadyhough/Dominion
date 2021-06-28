@@ -16,8 +16,8 @@ class Card{
 
   public:
     Card();
-    void setName(string);
-    void setCost(int);
+    void setName( string);
+    void setCost( int);
     string getName();
     int getCost();
 };
@@ -26,6 +26,7 @@ class Treasure: public Card{
   int m_value;
   public:
     Treasure();
+    Treasure(Treasure&);
     void setValue(int);
     int getValue();
 };
@@ -49,6 +50,7 @@ class Victory_Card: public Card{
   int m_victoryPoints;
   public:
     Victory_Card();
+    Victory_Card(Victory_Card& );
     void setPoints(int);
     int getPoints();
 };

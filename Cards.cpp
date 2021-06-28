@@ -2,11 +2,11 @@
 
 Card::Card(){}
 
-void Card::setName(string name ){
+void Card::setName( string name ){
   m_name = name;
 }
 
-void Card::setCost(int cost){
+void Card::setCost( int cost){
   m_cost = cost;
 }
 
@@ -19,6 +19,13 @@ int Card::getCost(){
 }
 
 Treasure::Treasure(){}
+
+Treasure::Treasure(Treasure& oldClass){
+  m_value = oldClass.m_value;
+  setCost(oldClass.getValue());
+  setName(oldClass.getName());
+}
+
 void Treasure::setValue(int value){
   m_value = value;
 }
@@ -45,6 +52,12 @@ Gold::Gold(){
 }
 
 Victory_Card::Victory_Card(){}
+
+Victory_Card::Victory_Card(Victory_Card& oldClass){
+  m_victoryPoints = oldClass.m_victoryPoints;
+  setName(oldClass.getName());
+  setCost(oldClass.getCost());
+}
 
 void Victory_Card::setPoints(int points){
   m_victoryPoints = points;

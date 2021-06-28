@@ -11,6 +11,12 @@ string Kingdom_Card::getType()
   return m_type;
 }
 
+Kingdom_Card::Kingdom_Card(Kingdom_Card& oldClass){
+  m_type = oldClass.m_type;
+  setCost(oldClass.getCost());
+  setName(oldClass.getName());
+}
+
 Cellar::Cellar(){
   setName("Cellar");
   setCost(2);

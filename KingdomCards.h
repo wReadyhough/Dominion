@@ -6,6 +6,7 @@ class Kingdom_Card: public Card{
   string m_type;
   public:
     Kingdom_Card();
+    Kingdom_Card( Kingdom_Card&);
     void setType(string);
     string getType();
 };
